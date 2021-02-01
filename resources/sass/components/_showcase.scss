@@ -5,11 +5,13 @@
     display: inline-block;
     margin-top: 2rem;
     padding: .5rem;
+    
    
    
     @include respond(tab-port) {
         margin-top: 1rem;
         padding: 0 0 0;
+        
     }
 
     li {
@@ -24,11 +26,12 @@
 
 
 .favorite-photo {
-    width: 100%;
+    width: 110%;
     margin: 0;
     overflow: hidden;
     
     background-color: rgb(147, 212, 209);
+    
 
 
     img {

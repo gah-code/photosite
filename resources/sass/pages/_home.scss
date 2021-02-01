@@ -1,0 +1,240 @@
+.section-welcome {
+    padding: 15rem 5rem;
+    position: relative;
+
+    @include respond(tab-port) {
+        padding: 15rem 0;
+    }
+}
+
+.section-welcome-quote{
+    padding: 15rem 10rem;
+    width: 100%;
+
+    @include respond(tab-port) { padding: 10rem 2.5rem 20rem 2.5rem; }
+}
+
+.section-primary {
+    padding: 15rem 10rem;
+    position: relative;
+
+    @include respond(tab-port) {
+        padding: 15rem 5rem;
+    }
+}
+
+.primary__box-a {
+    padding: 2.5rem;
+    background-color: rgba(var(--color-secondary), .9);
+
+    
+}
+.primary__box-b {
+    padding: 1.5rem;
+    margin-top: 2.5rem;
+    border-left: solid 3px rgba(var(--color-secondary), .9);
+
+}
+
+.section-features {
+    padding: 20rem 5rem; 
+    background-image: linear-gradient(135deg,
+    rgba(var(--color-secondary), .9) 44.3%,
+    rgba(var(--grey-light), .8) 0%,
+    transparent 50%);
+    margin: 1rem;
+    //url(../resources/img/Details/627A1951.jpg);
+    //background-size: 100%;
+   // border-radius: 3px; 
+   // background-repeat: no-repeat;
+   // background-position: center;
+   // background-attachment: fixed;
+    @include respond(tab-port) {
+        //margin-top: -40vh;
+        //padding: 20rem 0;
+    }
+    
+}
+.section-steps {
+    padding: 15rem 0 30rem 0;
+    background: linear-gradient(290deg,
+    rgba(var(--color-secondary), .9) 43.33%,
+    rgba(var(--grey-light), .5) 0%,
+    transparent 50%) ;
+    margin: 2rem;
+}
+
+.section-services-a {
+    padding: 15rem 10rem;
+    background: linear-gradient(90deg,
+    rgba(var(--color-secondary), .9) 47%,
+    rgba(var(--grey-light), .3) 0%,
+    transparent 50%) ;
+    margin: 0 1rem;
+
+    @include respond(tab-port) {
+        padding: 15rem 5rem;
+    }
+}
+
+.section-services-b {
+    padding: 20rem 10rem;
+    margin: 0 1rem;
+
+    @include respond(tab-port) {
+        padding: 15rem 5rem;
+    }
+     
+        
+}
+
+.section-book {
+    padding: 15rem 2rem;
+
+    //background-color: rgba(var(--color-primary-light), .5);  
+
+}
+
+
+.book {
+    background-image: linear-gradient(90deg,
+    rgba(var(--color-secondary), .9) 0%,
+    rgba(var(--color-secondary), .9) 50%,
+    transparent 50%) ,
+    url(../resources/img/location/vineyard-1.jpg);
+    background-size: 100%;
+    border-radius: 3px;
+    box-shadow: var(--shadow-light);    
+
+
+    @include respond(tab-land) {
+        background-image: linear-gradient(90deg,
+        rgba(var(--color-secondary), .9) 0%,
+        rgba(var(--color-secondary), .9) 65%,
+        transparent 65%) ,
+        url(../resources/img/location/vineyard-1.jpg);
+        background-size: cover;
+    }
+
+
+    @include respond(tab-port) {
+        background-image: linear-gradient(to right,
+        rgba(var(--color-secondary), .9) 0%,
+        rgba(var(--color-secondary), .9) 100%,
+        transparent 65%) ,
+        url(../resources/img/location/vineyard-1.jpg);
+       
+       
+    }
+
+
+
+    &__form {
+        width: 50%;
+        padding: 6rem;
+
+        @include respond(tab-land) { width: 65%; }
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+
+}
+
+.card {
+    height: 53rem;
+    position: relative;
+    background-color: lightblue;
+    
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+       
+
+
+    }
+
+    &__heading {
+        font-size: 2.5rem;
+        font-weight: 300;
+        text-align:right;
+         text-transform: uppercase;
+         color: var(--color-black);
+         position: absolute;
+         top: 12rem;
+         right: 2rem;
+         width: 75%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        &-1 {
+            background-image:linear-gradient(to right bottom, rgba(#f8f883, .85),
+            rgba(#ffff33, 35)) ;
+
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+
+        ul {
+            list-style: none;
+            width: 90%;
+            margin: 0 auto;
+          
+
+            li {
+                text-align: center;
+                font-size: 1.6rem;
+                padding: 1rem;
+                word-spacing: 1px;
+
+         
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid white;
+                }
+            }
+
+        }
+    }
+
+    &__btn {
+        text-align: center;
+        margin: 1rem auto;
+        padding-top: 2rem;
+      
+    }
+
+   
+ }
+
+
+
+
+.section-new {
+    padding: 15rem 0;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(var(--color-secondary-light), .8),
+        rgba(var(--color-primary-light), .8)),
+        url(../resources/img/wedding/w1.jpg);
+        background-size: cover;
+        background-position: top;
+        position: relative;  
+
+
+}
+
+
+
+
+
