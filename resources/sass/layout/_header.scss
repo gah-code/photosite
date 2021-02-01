@@ -1,0 +1,173 @@
+
+.main-header { 
+    background-image: linear-gradient(to top, rgba(var(--color-primary-light), 0.7), 
+    rgba(var(--color-primary), 0.2)), url(../resources/img/wedding/w20.jpg);
+    position: relative;
+    overflow: hidden;
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed;
+    height: 100vh;   
+ 
+}
+
+
+.hero-text-box {
+    position: absolute;
+    width: 114rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 2rem;
+
+    a:link { margin: .8rem; }
+
+    @include respond(tab-land) { padding: 0 5rem ; }
+    @include respond(tab-port) { padding: 0 16.5rem ; }
+    @include respond(phone) { padding: 0 28.5rem ; }
+
+}
+
+
+nav {
+    height: 6.8rem;
+    display: flex;
+    background:rgb(173, 220, 226);
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+    padding: .5rem 4rem .5rem 15rem;
+    position: fixed;
+    z-index: 999;
+
+   
+
+    @include respond(tab-port) {
+        padding: 0 4rem 0 5rem;
+    }
+    
+}
+
+nav .nav-logo {
+    font-size: 3.5rem;
+
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    overflow: hidden;
+ 
+}
+
+nav ul li {
+   margin: 0 2rem;
+
+}
+nav ul li a {
+    color: #1b1b1b;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 1rem .5rem;
+    transition: all 0.2s ease;
+
+
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color:#fff;
+    //background: #fff;
+}
+
+nav .menu-btn i {
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+
+}
+
+#click {
+    display: none;
+}
+
+@media (max-width: 940px) {
+
+
+    nav .menu-btn i {
+        display: block;
+    }
+
+    #click:checked ~ .menu-btn i:before {
+        content: "\f00d";
+        
+    }
+
+    nav ul {
+        position: fixed;
+        top: 1.7rem; 
+        bottom: 30px;
+        left: -100%;
+        margin: 5rem auto;
+        //background:rgba(173, 220, 226, 0.945);
+        background: rgba( 255, 255, 255, 0.15 );
+        padding: 6.5rem 0;
+        backdrop-filter: blur( 5.5px );
+        -webkit-backdrop-filter: blur( 5.5px );
+        height: 100vh;
+        width: 100%;
+        display: block;   
+        text-align: center;
+        transition: all 0.4s ease;
+        z-index: 9999;
+       
+    }
+
+
+    #click:checked ~ ul{
+        left: 0%;
+    }
+
+
+    nav ul li {
+        margin: 3rem 0;
+    }
+
+
+
+    nav ul li a {
+        letter-spacing: 4px;
+        line-height: 3.9rem;
+        font-size: 3.3rem;
+        display: block;
+        position: relative;
+
+    }
+
+  
+
+    nav ul li a:hover,
+    nav ul li a.active {
+       color: rgba(var(--color-primary), 10);
+       transform: translateY(10px);
+       transition: 0.4s;
+       
+       
+     
+    }
+
+   
+}
+
+
+
+
+
+
+
+
+    
