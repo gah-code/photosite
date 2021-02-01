@@ -1,0 +1,41 @@
+.icon::before {
+    display: inline-block;
+    position: relative;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    font-size: 2.7rem;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    background-image: linear-gradient(to right, rgba(var(--color-secondary),10), rgba(var(--color-primary),10));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+}
+
+
+.booking::before { content: "\f073"; font-weight: 400; font-size: 7rem;
+    @include respond(tab-port) {
+         font-size: 6rem;
+    }
+   
+  }
+
+.user::before { content: "\f007"; font-weight: 400; }
+
+.cogs::before { content: "\f085"; font-size: 7rem;
+    @include respond(tab-port) {
+      font-size: 6rem;
+  }
+}
+
+.map::before { content: "\f5a0"; font-weight: 800; font-size: 7rem;
+    @include respond(tab-port) {
+      font-size: 6rem;
+  }
+  
+}
+
+
