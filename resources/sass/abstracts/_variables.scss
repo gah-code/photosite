@@ -1,0 +1,30 @@
+:root {
+    // COLOR VARIABLES
+    --color-primary:135,206,235; //	#87CEEB 
+    --color-primary-light:173,216,230; //#ADD8E6;
+    --color-secondary:255,218,185; //#FFDAB9 
+    --color-secondary-light:255,240,245; //	#FFF0F5
+    
+    --grey-dark: 211,211,211; //#D3D3D3
+    --grey-light: 245,245,245; //#F5F5F5
+
+
+
+    --color-white:255,255,255;
+    --color-black: #2B2B2B;
+    
+    // STYLE VARIABLES 
+    --shadow-dark: 0 2rem 5rem rgba(0,0,0,.2);
+    --shadow-light: 0 1.9rem 5rem rgba(0,0,0,.09);
+
+    // FONT VARIABLES 
+    --default-font: 1.6rem; /// 22px 
+
+    // GRID VARIABLES 
+    --grid-width: 114rem; // 1,596PX
+    --gutter-vertical: 8.5rem; // MARGIN BOTTOM 
+    --gutter-horizontal: 6rem; // MARGIN RIGHT
+}
+
+
+
