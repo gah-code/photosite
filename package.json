@@ -1,0 +1,11 @@
+{
+  "name": "photosite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/gah-code/photosite.git",
+  "author": "Gilbert Haro <gilbertharocode@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "toml": "^3.0.0"
+  }
+}
