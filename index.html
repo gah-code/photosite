@@ -327,6 +327,7 @@
                 action="POST"
                 class="form"
                 method="POST"
+                name="contact"
                 data-netlify="true"
               >
                 <div class="u-margin-bottom-small">
@@ -354,9 +355,21 @@
                     id="email"
                     required
                   />
-                  <label for="email" class="form__label">Email address</label>
+                  <label name="email" for="email" class="form__label"
+                    >Email address</label
+                  >
+                </div>
+                <div class="form__group u-margin-top-small">
+                  <a class="btn btn-white" type="submit">Next step &rarr;</a>
                 </div>
 
+                <div class="field">
+                  <div data-netlify-recaptcha="true"></div>
+                </div>
+              </form>
+              <!--
+
+             
                 <div class="form__group">
                   <input
                     type="date"
@@ -424,14 +437,8 @@
                     </label>
                   </div>
                 </div>
-                <div class="form__group u-margin-top-small">
-                  <a class="btn btn-white" type="submit">Next step &rarr;</a>
-                </div>
 
-                <div class="field">
-                  <div data-netlify-recaptcha="true"></div>
-                </div>
-              </form>
+                   -->
             </div>
           </div>
         </div>
