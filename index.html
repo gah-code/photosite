@@ -323,12 +323,15 @@
         <div class="row">
           <div class="book js--section-form">
             <div class="book__form">
-              <form name="contact" method="POST" data-netlify="true">
+              <form name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
                 <p>
-                  <label>Your Name: <input type="text" name="name" /></label>
+                  <label for="name" class="form__label">Your Name: <input type="text" name="name"  class="form__input"  placeholder="Full name" id="name"
+                    required /></label>
                 </p>
                 <p>
-                  <label>Your Email: <input type="email" name="email" /></label>
+                  <label for="email" class="form__label">Your Email: <input type="email" name="email" class="form__input"
+                    placeholder="Email address"
+                    id="email" /></label>
                 </p>
 
                   <label>Message: <textarea name="message"></textarea></label>
