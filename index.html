@@ -326,7 +326,6 @@
               <form
                 action="POST"
                 class="form"
-                method="POST"
                 name="contact"
                 data-netlify="true"
               >
@@ -359,13 +358,15 @@
                     >Email address</label
                   >
                 </div>
-                <div class="form__group u-margin-top-small">
-                  <a class="btn btn-white" type="submit">Next step &rarr;</a>
-                </div>
 
                 <div class="field">
                   <div data-netlify-recaptcha="true"></div>
                 </div>
+
+                <div class="form__group u-margin-top-small">
+                  <a class="btn btn-white" type="submit">Next step &rarr;</a>
+                </div>
+                <input type="hidden" name="form-name" value="contact" />
               </form>
               <!--
 
