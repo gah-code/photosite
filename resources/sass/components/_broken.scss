@@ -1,82 +1,68 @@
 .grid__box {
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr .2fr 3fr 2fr;
-    grid-template-rows: 50px 10rem 8rem 8rem 4rem;
+  position: relative;
+  display: grid;
+  padding-bottom: 20rem;
+  grid-template-columns: 1fr 3fr 1fr 0.2fr 3fr 2fr;
+  grid-template-rows: 50px 10rem 8rem 8rem 4rem;
+
+  @include respond(tab-port) {
+    grid-template-columns: 2fr 3fr 2fr 0.2fr 1fr 1fr 5fr;
+    grid-template-rows: 15rem 8rem 8rem 10rem 10rem;
+  }
+
+  &-img-1 {
+    border: solid 2px rgba(var(--color-primary), 0.5);
+    border-radius: 5px;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 4;
 
     @include respond(tab-port) {
-        grid-template-columns: 2fr 3fr 2fr .2fr 1fr 1fr 5fr;
-        grid-template-rows: 15rem 8rem 8rem 10rem 2rem;
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
     }
-    
-    &-img-1 {
-        border: solid 2px rgba(var(--color-primary),.5);
-        border-radius: 5px;
-        grid-column: 1 / span 2;
-        grid-row: 1/ span 4;
+  }
 
-        @include respond(tab-port) {
-            grid-column: 1 / span 2;
-            grid-row: 1 / span 2;
-        }
+  &-img-2 {
+    background: url(../resources/img/wedding/w14.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-column: 2 / span 2;
+    grid-row: 2 / span 4;
+
+    @include respond(tab-port) {
+      grid-column: 7 / span 4;
+      grid-row: 1 / span 4;
+      z-index: 10;
     }
- 
-    &-img-2 {
-        background: url(../resources/img/wedding/w14.jpg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        grid-column: 2 / span 2;
-        grid-row: 2 / span 4;
-
-        @include respond(tab-port) {
-            grid-column: 7 / span 2;
-            grid-row: 4 / span 3;
-        }
-        
-    }
-
+  }
 }
 
 .cta__wrapper {
-    grid-column: 5 / span 3;
-    grid-row: 1 / span 6;
-    background-color: rgba(var(--color-secondary), .9);
+  grid-column: 5 / span 3;
+  grid-row: 1 / span 6;
+  background-color: rgba(var(--color-secondary), 0.9);
 
-    @include respond(tab-port) {
-        grid-column: 1 / span 5;
-        grid-row: 1 / span 5;
-       
-       
-    }
+  @include respond(tab-port) {
+    grid-column: 1 / span 5;
+    grid-row: 1 / span 5;
+  }
 }
 
 .cta__box {
-    padding: 5rem 3rem;
-    position: relative;
-    
-    &-title {
-         font: bold 5.5em/1 'Playfair Display', serif;
-         margin-bottom: 3rem;
-         display: inline-block;
+  padding: 5rem 3rem;
+  position: relative;
 
-         @include respond(tab-port) {
-            font: bold 4.5em/1 'Playfair Display', serif; ;
+  &-title {
+    font: bold 5.5em/1 'Playfair Display', serif;
+    margin-bottom: 3rem;
+    display: inline-block;
 
-         }
+    @include respond(tab-port) {
+      font: bold 4.5em/1 'Playfair Display', serif;
     }
+  }
 
-    &-text {
-        padding: .2rem;
-    }
-
-   
-
-    
-
+  &-text {
+    padding: 0.2rem;
+  }
 }
-
-
-
-
-
-

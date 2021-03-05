@@ -1,134 +1,131 @@
 body {
-    font-family: "Lato", sans-serif;
-    font-weight: 300;
-    line-height: 1.7;
-    color: var(--color-black);
-    text-rendering: optimizeLegibility;
-    overflow-x: hidden;
-    font-size: var(--default-font);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--color-black);
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  font-size: var(--default-font);
 }
 
 .heading-primary {
-    color: var(--color-black);
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    font-size: 5.5rem;
-    font-weight: 500;
-    margin-bottom: 6rem;
+  color: var(--color-black);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 1.1;
+  //margin-bottom: 4rem;
 
-    @include respond(tab-port) {
-       text-align: left;
-       margin-bottom: 3.5rem;
-       font-size: 5rem;
-       letter-spacing: .1rem;
-       
-         
-      }
+  @include respond(tab-port) {
+    text-align: left;
+    //margin-bottom: 1.5rem;
+    font-size: 5.4rem;
+    letter-spacing: 0.2rem;
+  }
+}
+.heading-primary-b {
+  color: rgba(var(--grey-light), 10);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 5.9rem;
+  font-weight: 400;
+  margin-bottom: 4.5rem;
+
+  @include respond(tab-port) {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    font-size: 5.5rem;
+    letter-spacing: 0.3rem;
+  }
 }
 
 .heading-secondary {
-    font-size: 4rem;
-    text-transform: uppercase;
-    font-weight: 400;
-    display: inline-block;
-    //background-image: linear-gradient(to right, var(--color-black), var(--color-black));
-    //-webkit-background-clip: text;
-    color: var(--color-black);
-    //background-clip: text;
-    //color: transparent;
-    letter-spacing: 3px;
-    transition: all .2s;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  display: inline-block;
+  //background-image: linear-gradient(to right, var(--color-black), var(--color-black));
+  //-webkit-background-clip: text;
+  color: var(--color-black);
+  //background-clip: text;
+  //color: transparent;
+  letter-spacing: 3px;
+  transition: all 0.2s;
 
-    &:hover {
-        transform: skewY(2deg) scale(1.1);
-        text-shadow: .5rem 1rem 2rem rgba(var(--color-primary), .3);
-    }
+  &:hover {
+    transform: skewY(2deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(var(--color-primary), 0.3);
+  }
 
-    @include respond(tab-port) {
-        font-size: 3.8rem;
-    }
+  @include respond(tab-port) {
+    font-size: 3.8rem;
+  }
 }
 
-.heading-tertiary  {
-    color: var(--color-black);
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    display: inline-block;
-    letter-spacing: 2px;
-    word-spacing: 3px;
-    margin-bottom: 1rem;
+.heading-tertiary {
+  color: var(--color-black);
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  margin-bottom: 1rem;
 
-    @include respond(tab-port) { font-size: 2.2rem; margin-bottom: .5rem;    }
-
-
-
+  @include respond(tab-port) {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
 }
-
 
 .heading__underline {
-    font-size: 4rem;
-    word-spacing: .4rem;
-    text-align: center;
-    letter-spacing: 2px;
-    font-weight: 300;
-    text-transform: uppercase;
+  font-size: 4.5rem;
+  word-spacing: 0.4rem;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 300;
+  text-transform: uppercase;
 
-    &::after {
-        display: block;
-        height: 2px;
-        background-color: rgba(var(--color-primary-light),5);
-        content: " ";
-        width: 60px;
-        margin: 0 auto;
-        margin: 3rem auto;
+  &::after {
+    display: block;
+    height: 2px;
+    background-color: rgba(var(--color-primary-light), 5);
+    content: ' ';
+    width: 60px;
+    margin: 0 auto;
+    margin: 3rem auto;
+  }
 
-        
-    }
-
-    @include respond(tab-port) { 
-        font-size: 3.5rem;
-       
-    }
-
-   
-
+  @include respond(tab-port) {
+    font-size: 3.8rem;
+  }
 }
-
 
 .paragraph {
-    //font-size: 1.8rem;
-    font-size:var(--default-font);
+  //font-size: 1.8rem;
+  font-size: var(--default-font);
 
-    &:not(:last-child) {
-        margin-bottom: 3rem;
-    }
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
 }
-
 
 .paragraph__center {
-    line-height: 3rem;
-    word-spacing: .1rem;
-    text-align: center;
-    color: var(--color-black);
-    max-width: 100%;
-    font-size: 2rem;
-    margin: 0 auto;
-    width: 70%;
-    
+  line-height: 3rem;
+  word-spacing: 0.1rem;
+  text-align: center;
+  color: var(--color-black);
+  max-width: 100%;
+  font-size: 2rem;
+  margin: 0 auto;
+  width: 70%;
 
-    &:not(:last-child) {
-        margin-bottom: 3rem;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
 
-    
-    }
-
-    @include respond(tab-port) {
-        font-size: 1.6rem;
-        width: 100%;
-    }
-
+  @include respond(tab-port) {
+    font-size: 1.6rem;
+    width: 100%;
+  }
 }
-
-
-
-

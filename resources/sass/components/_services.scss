@@ -1,455 +1,150 @@
-.services {
-    position: relative;
-    text-align: center;
-    transition: transform .3s;
-  
-    .e-grid {
-        position: relative;
-        padding: 1em 0 4em;
-        max-width: 1000px;
-        list-style: none;
-        text-align: center;
-        letter-spacing: 1px;   
-    }
-
-    .e-grid figure {
-        position: relative;
-        float: left;
-        overflow: hidden;
-        margin: 10px 1%;
-        min-width: 350px;
-        max-width: 500px;
-        max-height: 400px;
-        width: 100%;
-        background:rgba(var(--color-secondary-light), .5);
-        text-align: center;
-        cursor: pointer;
-    }
-
-    .e-grid figure img {
-        position: relative;
-        display: block;
-        min-height: 100%;
-        max-width: 100%;
-        opacity: 0.5;
-    }
-
-    .e-grid figure figcaption {
-        padding: 2em;
-        color: #fff;
-        text-transform: uppercase;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-    }
-
-    .e-grid figure figcaption::before,
-    .e-grid figure figcaption::after {
-        pointer-events: none;
-    }
-
-
-    .e-grid figure figcaption,
-    .e-grid figure figcaption > a {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    .e-grid figure figcaption > a {
-        z-index: 10000;
-        text-indent: 200%;
-        white-space: nowrap;
-        font-size: 0;
-        opacity: 0;
-    }
-
-    .e-grid figure h2 span {
-        font-weight: 300;
-    }
-
-    figure.effect-oscar {
-        background: -webkit-linear-gradient(45deg, #87CEEB 10%, #3b7183  30%, #f3f2ff  100%);
-        background: linear-gradient(45deg,#87CEEB 10%,#3b7183 30%,#f3f2ff 100%);
-    }
-
-    figure.effect-oscar img {
-        opacity: 0.9;
-        -webkit-transition: opacity 0.35s;
-        transition: opacity 0.35s;
-
-    }
-
-    figure.effect-oscar figcaption {
-        padding: 3em;
-        background-color: rgba(58,52,42,0.2);
-        -webkit-transition: background-color 0.35s;
-        transition: background-color 0.35s;
-    
-    }
-
-    figure.effect-oscar figcaption::before {
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        bottom: 30px;
-        left: 30px;
-        border: 1px solid #fff;
-        content: '';
-    }
-
-    figure.effect-oscar h2 {
-        margin: 20% 0 10px 0;
-        -webkit-transition: -webkit-transform 0.35s;
-        transition: transform 0.35s;
-        -webkit-transform: translate3d(0,100%,0);
-        transform: translate3d(0,100%,0);
-    }
-
-    figure.effect-oscar figcaption::before,
-    figure.effect-oscar p {
-        opacity: 0;
-        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-        transition: opacity 0.35s, transform 0.35s;
-        -webkit-transform: scale(0);
-        transform: scale(0);
-    }
-
-    figure.effect-oscar:hover h2 {
-        -webkit-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
-    }
-
-    figure.effect-oscar:hover figcaption::before,
-    figure.effect-oscar:hover p {
-        opacity: 1;
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-
-    figure.effect-oscar:hover figcaption {
-        background-color: rgba(58,52,42,0);
-    }
-
-    figure.effect-oscar:hover img {
-	opacity: 0.2;
-    }
-
-    &:hover {
-    transform: translateY(-1.5rem) scale(1.03);
-    }
-
-
-}
-
-
-
-
 .section-wedding {
-    position: relative;
-   
+  position: relative;
 }
 
 .wedding-header,
 .family-header {
-    font: bold 3.7em/1 'Playfair Display', serif;
-    padding-right: 1rem;
-    margin-bottom: 1rem;
+  font: bold 3.7em/1 'Playfair Display', serif;
+  padding-right: 1rem;
+  margin-bottom: 2.5rem;
+
+  @include respond(tab-port) {
+    padding-right: 0;
+  }
+
+  span {
+    font-size: 9rem;
+    font-family: bold cursive;
+    color: rgba(var(--color-primary), 0.7);
+    padding: 1.2rem 0.5rem 1rem 0.5rem;
 
     @include respond(tab-port) {
-         padding-right: 0;
+      color: rgba(var(--color-secondary), 0.9);
     }
-
-
-     span {
-         font-size: 9rem;
-         font-family: bold cursive;
-         color: rgba(var(--color-primary), .7);
-         padding: 1.2rem .5rem 1rem .5rem;
-         
-
-         @include respond(tab-port) { color: rgba(var(--color-secondary), .9); }
-     }
-
-
-
+  }
 }
 
 .wedding__container {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    list-style: none;
-    margin: 0 5rem;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  list-style: none;
+  margin: 0 5rem;
 
-    li {
-        display: block;
-        float: left;
-        width: 40%;
-        padding-top: 1rem;
-        padding-left: 2rem;
+  @include respond(tab-port) {
+    margin: 0 3rem;
+  }
 
-      
+  li {
+    display: block;
+    float: left;
+    width: 40%;
+    padding-top: 1rem;
+    padding-left: 2rem;
 
-        @include respond(tab-port) {
-            width: 50%;
-            padding: 2rem 1rem 0 0;
-        }
-    
+    @include respond(tab-port) {
+      width: 50%;
+      padding: 1rem 2rem 0 0;
     }
+  }
 
-    li:nth-child(3n-1) {
-       padding-left: 3rem;
-       padding-top: 1rem;
-       width: 44%;
-       //float: right;
-
+  li:nth-child(3n-1) {
+    padding-left: 3rem;
+    padding-top: 1rem;
+    width: 44%;
+    //float: right;
+    @include respond(tab-port) {
+      width: 50%;
+      padding-bottom: 2rem;
+      padding-left: 1rem;
     }
+  }
 
-    li:last-child {
-        padding-left: 3rem;
-        width: 44%;
-        //float: right;
+  li:last-child {
+    padding-left: 3rem;
+    width: 44%;
 
-    
-        @include respond(tab-port) {
-            padding:0;
-            width: 45%;
-         
-        }
+    @include respond(tab-port) {
+      padding: 0;
+      width: 50%;
+      float: right;
     }
+  }
 }
-
 
 .wedding-photo {
-    width:100%;
-    overflow: hidden;
+  width: 100%;
+  overflow: hidden;
 
-
-    img {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        transform: scale(1.15);
-        transition: transform 0.5s, opacity 0.4s;
-        margin: 0;
-        opacity: .9;
-    }
+  img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.4s;
+    margin: 0;
+    opacity: 0.9;
+  }
 }
 
-
 .wedding-photo img:hover {
-    opacity: 1;
-    transform: scale(1.10);
-    box-shadow: var(--shadow-light); 
-    
-    }
-
-
+  opacity: 1;
+  transform: scale(1.1);
+  box-shadow: var(--shadow-light);
+}
 
 .section-family {
-    position: relative;
-  
+  position: relative;
 }
 
 .family__container {
-    position: relative;
-    list-style: none;
-    
+  position: relative;
+  list-style: none;
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
 
-    img {
-        width: 100%;
-        height: 100%;
-        transition: transform .3s;
-       
-
-        &:hover {
-            box-shadow: var(--shadow-light); 
-            border: rgba(var(--color-secondary), .9);
-        }
-  
-    }
-
-    li {
-        float: right;
-        width: 45%; 
-        padding-left: 1rem;
-        
-        @include respond(tab-port) {
-            padding: 3rem .5rem; 
-            width: 40%;
-           
-        }
-    }
-
-    li:last-child {
-        width: 55%;
-        overflow: hidden;
-        padding: 1.5rem;
-
-        @include respond(tab-port) {
-            width: 60%;
-        
-        }
-    }
-}
-
-/*
-.effect-box {
-    position: relative;
-    padding: 1em 0 4em;
-    max-width: 1000px;
-    list-style: none;
-    text-align: center;
-    letter-spacing: 1px;   
-
-}
-
-.effect-box figure {
-    position: relative;
-    float: left;
-    overflow: hidden;
-    margin: 10px 1%;
-    min-width: 350px;
-    max-width: 500px;
-    max-height: 400px;
-    width: 100%;
-    background:rgba(var(--color-secondary-light), .2);
-    text-align: center;
-    cursor: pointer;
-
-}
-
-/// Main Image control 
-.effect-box figure img {
-    position: relative;
-    display: block;
-    min-height: 100%;
-    max-width: 100%;
-    opacity: .9;
-}
-
-
-.effect-box figure figcaption {
-    padding: 2em;
-    color: #fff;
-    text-transform: uppercase;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-
-.effect-box  figure figcaption::before,
-.effect-box  figure figcaption::after {
-    pointer-events: none;
-}
-
-
-.effect-box figure figcaption,
-.effect-box figure figcaption > a {
-    position: absolute;
-    top: 0;
-    left: 0;
+  img {
     width: 100%;
     height: 100%;
+    transition: transform 0.3s;
+
+    &:hover {
+      box-shadow: var(--shadow-light);
+      border: rgba(var(--color-secondary), 0.9);
+    }
+  }
+
+  li {
+    float: right;
+    width: 45%;
+    padding: 0.5rem;
+    display: block;
+    z-index: 10;
+
+    @include respond(tab-port) {
+      padding: 0.5rem;
+      width: 55%;
+      position: absolute;
+      z-index: 10;
+      float: left;
+    }
+  }
+
+  li:first-child {
+    left: 30rem;
+  }
+
+  li:last-child {
+    width: 55%;
+    overflow: hidden;
+    padding: 0.5rem;
+    position: relative;
+    z-index: 0;
+
+    @include respond(tab-port) {
+      padding-right: 3rem;
+      width: 75%;
+    }
+  }
 }
-
-.effect-box figure figcaption > a {
-    z-index: 10000;
-    text-indent: 200%;
-    white-space: nowrap;
-    font-size: 0;
-    opacity: 0;
-
-}
-
-.effect-box figure h2 span {
-    font-weight: 300;
-}
-
-
-
-
-figure.effect__one {
-    //background: -webkit-linear-gradient(45deg, #87CEEB 10%, #3b7183  30%, #f3f2ff  100%);
-    background: linear-gradient(45deg,rgba(var(--color-primary-light), .6)10%, rgba(var(--color-primary), .9) 30%,#f3f2ff 100%);
-     
-}
-
-figure.effect-one img {
-    opacity: 1;
-    -webkit-transition: opacity 0.35s;
-    transition: opacity 0.35s;
-
-  
-
-}
-
-figure.effect__one figcaption {
-    padding: 3em;
-    //background-color: rgba(58,52,42,0.2);
-    -webkit-transition: background-color 0.35s;
-    transition: background-color 0.35s;
-
-  
-
-}
-
-figure.effect__one figcaption::before {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    bottom: 30px;
-    left: 30px;
-    border: 1px solid #fff;
-    content: '';
-
-}
-
-
-figure.effect__one  h2 {
-    margin: 20% 0 10px 0;
-    -webkit-transition: -webkit-transform 0.35s;
-    transition: transform 0.35s;
-    -webkit-transform: translate3d(0,100%,0);
-    transform: translate3d(0,100%,0);
-
-}
-
-
-figure.effect__one figcaption::before,
-figure.effect__one p {
-    opacity: 0;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    font-size: 1.2rem;
-}
-
-figure.effect__one:hover h2 {
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-}
-
-figure.effect__one:hover figcaption::before,
-figure.effect__one:hover p {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-}
-
-figure.effect__one:hover figcaption {
-    background-color: rgba(58,52,42,0);
-}
-
-figure.effect__one:hover img{
-    opacity: 0.2;
-
-
-}
-
-
-
-*/
