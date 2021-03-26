@@ -22,7 +22,7 @@
     }
   }
 
-  &-img-2 {
+  &-img-2 {  
     background: url(../resources/img/wedding/w14.jpg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -58,7 +58,7 @@
     display: inline-block;
 
     @include respond(tab-port) {
-      font: bold 4.5em/1 'Playfair Display', serif;
+      font: bold 4.2em/1 'Playfair Display', serif;
     }
   }
 
