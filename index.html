@@ -273,7 +273,7 @@
       <div class="row">
         <div class="u-center-text">
           <h2 class="u-margin-bottom-big u-margin-top-med heading__underline">
-            Member &mdash; Features
+            Features
           </h2>
         </div>
       </div>
@@ -285,10 +285,10 @@
                 <div class="icon booking"></div>
               </div>
               <div class="feature__box-text">
-                <h3 class="feature__box-header">Calendar</h3>
+                <h3 class="feature__box-header">Booking</h3>
                 <p>
-                  Scheduling made simple, provide your desired time, date and
-                  type of service and send using the photo service calendar.
+                  Scheduling made simple, provide your Name, Email, desired date
+                  and type of service useing the form below!
                 </p>
               </div>
               <div class="feature__box-btn">
@@ -304,8 +304,8 @@
               <div class="feature__box-text">
                 <h3 class="feature__box-header">Locations</h3>
                 <p>
-                  Scheduling made simple, provide your desired time, date and
-                  type of service and send using the photo service calendar.
+                  COMING SOON &mdash; Locations made fun; provide your location
+                  and view areas near or far that most draws your attention!
                 </p>
               </div>
               <div class="feature__box-btn">
@@ -486,21 +486,31 @@
                     id="email"
                 /></label>
               </p>
+              <p class="form__group">
+                <label for="date" class="form__label"
+                  >Date:
+                  <input id="date" type="date" name="date" class="form__input"
+                /></label>
+              </p>
 
               <label class="form__label">Service Type</label>
 
               <p class="form__group">
-                <select class="form__input" name="find-us" id="find-us">
-                  <option value="friends" selected>Wedding</option>
-                  <option value="search">Family Session</option>
-                  <option value="ad">Engagement</option>
+                <select class="form__input" name="service[]" id="service-type">
+                  <option value="Wedding" selected>Wedding</option>
+                  <option value="Family">Family</option>
+                  <option value="Engagement">Engagement</option>
                   <option value="other">Other</option>
                 </select>
               </p>
               <p class="form__group">
                 <label class="form__label"
                   >Message:
-                  <textarea class="form__input" name="message"></textarea>
+                  <textarea
+                    class="form__input"
+                    placeholder="Tell me some details"
+                    name="message"
+                  ></textarea>
                 </label>
               </p>
               <div data-netlify-recaptcha="true"></div>
