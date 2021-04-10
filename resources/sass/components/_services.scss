@@ -12,6 +12,10 @@
     padding-right: 0;
   }
 
+  @include respond(phone) {
+    font-size: 3.3em;
+  }
+
   span {
     font-size: 9rem;
     font-family: bold cursive;
@@ -35,6 +39,10 @@
     margin: 0 3rem;
   }
 
+  @include respond(phone) {
+    margin: 0;
+  }
+
   li {
     display: block;
     float: left;
@@ -45,6 +53,10 @@
     @include respond(tab-port) {
       width: 50%;
       padding: 1rem 2rem 0 0;
+    }
+
+    @include respond(phone) {
+      padding-right: 1rem;
     }
   }
 
@@ -133,6 +145,11 @@
 
   li:first-child {
     left: 30rem;
+
+    @include respond(phone) {
+      left: 18rem;
+      bottom: 2rem;
+    }
   }
 
   li:last-child {
@@ -144,7 +161,7 @@
 
     @include respond(tab-port) {
       padding-right: 3rem;
-      width: 75%;
+      width: 80%;
     }
   }
 }

@@ -4,7 +4,7 @@ body {
   line-height: 1.7;
   color: var(--color-black);
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   font-size: var(--default-font);
 }
 
@@ -23,6 +23,10 @@ body {
     font-size: 5.4rem;
     letter-spacing: 0.2rem;
   }
+
+  @include respond(phone) {
+    font-size: 4.5rem;
+  }
 }
 .heading-primary-b {
   color: rgba(var(--grey-light), 10);
@@ -37,6 +41,10 @@ body {
     margin-bottom: 1.5rem;
     font-size: 5.5rem;
     letter-spacing: 0.3rem;
+  }
+
+  @include respond(phone) {
+    font-size: 4.4rem;
   }
 }
 
